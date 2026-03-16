@@ -1,2 +1,2 @@
 # practice-season
-A routing project which shows visiting another page with loading the page in Next.js
+routing project which shows the visiting one to another page without loading the page server in Next.js
