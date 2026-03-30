@@ -1,0 +1,10 @@
+body {
+    background-color: cornflowerblue;
+    color: beige;
+    margin: .5rem;
+    padding: 1;
+}
+
+p {
+    font-size: 2rem;
+}
