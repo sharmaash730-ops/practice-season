@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    grid-area: 2rem;
+    gap: 5rem;
+    text-align: center;
+    border-radius: 1.5rem;
+    background-color: black;
+    color: white;
+}
+
+
+.navbar{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.nav-links{
+    display: flex;
+    list-style:none;
+   
+}
+.nav-links li a {
+    color:white;
+    text-decoration: none;
+    padding:8px 15px;
+}
+.nav-links li a:hover{
+    background-color: red;
+    border-radius: 20px;
+}
+
+.box:hover{
+    background-color: #ffffff;
+    transform:scale(1.05);
+}
+
+.card{
+    box-shadow: 8px 8px 8px rgba(0,0,0,0.1);
+    transition: box-shadow 0.3s ease-in-out;
+    
+}
+.card:hover{
+    box-shadow: 0 10px 20px rgba(254,0,0,0.5);
+}
+.school{
+    background-color: black;
+    color: white;
+}
+.a {
+    color:azure;
+}
+.audi{
+    background-color:black;
+    color: white;
+    
+    align-content: center;
+    
+}
+.bmw{
+    background-color:black;
+    color: white;
+    
+    align-content: center;
+}
+.mercedes{
+    background-color:black;
+    color: white;
+    
+    align-content: center;
+}
+.dodge{
+    background-color:black;
+    color: white;
+    
+    align-content: center;
+}
