@@ -1,1 +1,27 @@
 
+products=[
+{
+"id":1,
+"title":"nokia",
+"price":2000,
+"count":1
+},
+{
+"id":2,
+"title":"samsung",
+"price":12000,
+"count":5
+},
+{
+"id":3,
+"title":"apple",
+"price":70000,
+"count":6
+},
+{
+"id":4,
+"title":"redmi",
+"price":24000,
+"count":5
+}
+]
