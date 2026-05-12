@@ -1,1 +1,7 @@
 
+step1-  python -m venv env
+step2-  ./env/scripts/activate
+step3-  pip install "fastapi[standard]"
+step4-  pip install SQLAlchemy
+step5-  pip install pydantic_settings
+step6-  pip install psycopg2-binary
