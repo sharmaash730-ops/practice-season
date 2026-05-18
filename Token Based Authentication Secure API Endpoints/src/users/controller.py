@@ -58,7 +58,7 @@ def is_authenticated(request:Request,db:Session):
     try:
         token = request.headers.get("authorization")
         if not token:
-             raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="you are unauthorized.")
+             rai   se HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="you are unauthorized.")
 
         token = token.split(" ")[-1]
     
@@ -69,6 +69,5 @@ def is_authenticated(request:Request,db:Session):
         if not user:
             raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detai="you are unauthorized.")    
     
-        return user   
-    except InvalidTokenError:
-         raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detai="you are unauthorized.") 
+        return user
+    
