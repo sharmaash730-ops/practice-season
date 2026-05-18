@@ -1,1 +1,5 @@
+from src.user.dtos import UserSchema,LoginSchema
+from sqlalchemy.orm import Session
 
+def register(body:UserSchema, db:Session):
+  return{"msg":"Registration Done"}
