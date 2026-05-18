@@ -4,6 +4,9 @@ from sqlalchemy.orm import Session
 from src.user.models import UserModel
 #password Hashing
 from pwdlib import PasswordHash
+from src.utils.settings import settings
+from datetime import datetime,timedelta
+import jwt
 
 password_hash = PasswordHash.recommended()
 
@@ -35,3 +38,17 @@ def register(body:UserSchema, db:Session):
     return new_user
     
   return{"msg":"Registration Done"}
+
+def login_user(body:LoginSchema,db:Session):
+    user = db.query(UserModel).filter(UserModel.username == body.username).first()
+    if not user:
+        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED,detail="You Entered Wrong Username !")
+    
+    if not verify_password(body.password,user.hash_password):
+        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED,detail="You Entered Wrong password")
+    
+    exp_time = datetime.now() + timedelta(minutes=settings.EXP_TIME)
+    print(exp_time)
+    token = jwt.encode({"_id":user.id, "exp":exp_time.timestamp()},settings.SECRET_KEY,settings.ALGORITHM)
+   
+    return {"token":token} 
