@@ -1,0 +1,9 @@
+pip install SQLAlchemy
+pip installpydantic_Settings
+pip install psycopg2-binary
+pip install pyjwt
+pip install "pwdlib[argon2]"
+pip install alembic
+alembic init alembic
+alembic revision - autogenerate -m "Initial migration"
+alembic upgrade head
