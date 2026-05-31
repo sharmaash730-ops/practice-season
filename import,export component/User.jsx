@@ -16,3 +16,5 @@ export function Profle(){
     </div>
   )
 }
+
+export const Username = "ashish";
